@@ -1,0 +1,164 @@
+/* Main Content - Adjust text color */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Change text color from white to a darker color for better readability */
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Hero Section */
+header.hero {
+    background-image: url('https://images.unsplash.com/photo-1558117338-c0a08d13eb32?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFydWJhfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position:50% 80%;
+    height: 400px;
+    color: rgb(255, 0, 0);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+}
+
+.hero p {
+    font-size: 2rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #0d6efd;
+    padding-top: 0px;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Smooth transition when opening/closing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1200;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    text-align: right; /* Aligns text to the right inside the button */
+}
+
+/* Sidebar Items */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Hide Sidebar when toggled closed */
+.sidebar.closed {
+    transform: translateX(-250px); /* Move sidebar off-screen */
+}
+
+/* Sidebar Toggle Button when sidebar is closed */
+.sidebar.closed + .sidebar-toggle {
+    right: -50px; /* Move button back outside the screen when the sidebar is closed */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Slightly smaller sidebar on mobile */
+    }
+
+    .sidebar-toggle {
+        right: -45px; /* Adjust button position for smaller sidebar */
+    }
+}
+
+/* Main Content */
+main {
+    margin-left: 250px; /* Adjusted to account for sidebar */
+    padding-top: 60px;
+    max-width: 900px;
+    margin: 2em auto;
+}
+
+/* Content Section Styling */
+.content-section {
+    padding: 2em;
+    background: rgb(255, 224, 187);
+    border-radius: 8px;
+    margin: 1.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0d6efd;
+}
+
+.next-page-link {
+    color: white;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar-toggle {
+        top: 20px;
+        right: -30px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
